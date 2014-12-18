@@ -1,6 +1,6 @@
 # flow-interfaces-underscore
 
-Flow interfaces allowing the use of Facebook's [Flow][flow] with Angular JS projects.
+Flow interfaces allowing the use of Facebook's [Flow][flow] with projects using the [Underscore.js][underscore] library.
 
 ## Usage
 
@@ -16,3 +16,4 @@ Flow interfaces allowing the use of Facebook's [Flow][flow] with Angular JS proj
 For more information, see [Flow][flow]
 
 [flow]: http://flowtype.org/
+[underscore]: http://underscorejs.org/
