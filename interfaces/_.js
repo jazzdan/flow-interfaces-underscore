@@ -14,6 +14,7 @@ declare class _UnderscoreCallbacks_ {
 declare var _cb_: _UnderscoreCallbacks_;
 
 declare class _UnderscoreChain_ {
+   chain(): _UnderscoreChain_;
    each(iteratee: _cb_.iterateeObject | _cb_.iterateeArray): Array | Object;
    each(iteratee: _cb_.iterateeObject | _cb_.iterateeArray, context: Object): Array | Object;
    filter(predicate: _cb_.predicate): Array;
@@ -25,25 +26,25 @@ declare class _UnderscoreChain_ {
    map(iteratee: _cb_.iterateeObject | _cb_.iterateeArray): Array | Object;
    map(iteratee: _cb_.iterateeObject | _cb_.iterateeArray, context: Object): Array | Object;
    omit(keys: string | Array<string> | Function): Object;
-   chain(): _UnderscoreChain_;
    reduce(iteratee: _cb_.iterateeReduceArray): string | number;
    reduce(iteratee: _cb_.iterateeReduceArray, memo: Array): string | number;
    reduce(iteratee: _cb_.iterateeReduceArray, memo: Array, context: Object): string | number;
 }
 
 declare class _Underscore_ {
+   chain(object: Object): _UnderscoreChain_;
    each(list: Array | Object, iteratee: _cb_.iterateeObject | _cb_.iterateeArray): Array | Object;
    each(list: Array | Object, iteratee: _cb_.iterateeObject | _cb_.iterateeArray, context: Object): Array | Object;
    filter(list: Array, predicate: _cb_.predicate): Array;
    filter(list: Array, predicate: _cb_.predicate, contect: Object): Array;
    findWhere<T>(list: Array<T>, properties: {}): T;
+   intersection(w...: Array): Array;
    isArray(object: any): boolean;
    isEmpty(object: Object): boolean;
    isObject(object: any): boolean;
    map(list: Array | Object, iteratee: _cb_.iterateeObject | _cb_.iterateeArray): Array | Object;
    map(list: Array | Object, iteratee: _cb_.iterateeObject | _cb_.iterateeArray, context: Object): Array | Object;
    omit(object: Object, keys: string | Array<string> | Function): Object;
-   chain(object: Object): _UnderscoreChain_;
    reduce(list: Array, iteratee: _cb_.iterateeReduceArray): string | number;
    reduce(list: Array, iteratee: _cb_.iterateeReduceArray, memo: Array): string | number;
    reduce(list: Array, iteratee: _cb_.iterateeReduceArray, memo: Array, context: Object): string | number;
