@@ -6,6 +6,7 @@ declare class _UnderscoreCallbacks_ {
    iterateeObject(value: any): void;
    iterateeObject(value: any, key: string | number): void;
    iterateeObject(value: any, key: string | number, list: Object): void;
+   iterateeReduceArray(memo: any, value: any): Array;
    iterateeReduceArray(memo: any, value: any, index: number): Array;
    iterateeReduceArray(memo: any, value: any, key: string | number): Array;
    predicate(value: any): boolean;
@@ -15,20 +16,17 @@ declare var _cb_: _UnderscoreCallbacks_;
 
 declare class _UnderscoreChain_ {
    chain(): _UnderscoreChain_;
-   each(iteratee: _cb_.iterateeObject | _cb_.iterateeArray): Array | Object;
-   each(iteratee: _cb_.iterateeObject | _cb_.iterateeArray, context: Object): Array | Object;
-   filter(predicate: _cb_.predicate): Array;
-   filter(predicate: _cb_.predicate, contect: Object): Array;
-   findWhere<T>(properties: {}): T;
-   isArray(): boolean;
-   isEmpty(): boolean;
-   isObject(): boolean;
-   map(iteratee: _cb_.iterateeObject | _cb_.iterateeArray): Array | Object;
-   map(iteratee: _cb_.iterateeObject | _cb_.iterateeArray, context: Object): Array | Object;
-   omit(keys: string | Array<string> | Function): Object;
-   reduce(iteratee: _cb_.iterateeReduceArray): string | number;
-   reduce(iteratee: _cb_.iterateeReduceArray, memo: Array): string | number;
-   reduce(iteratee: _cb_.iterateeReduceArray, memo: Array, context: Object): string | number;
+   each(iteratee: _cb_.iterateeObject | _cb_.iterateeArray): _UnderscoreChain_;
+   each(iteratee: _cb_.iterateeObject | _cb_.iterateeArray, context: Object): _UnderscoreChain_;
+   filter(predicate: _cb_.predicate): _UnderscoreChain_;
+   filter(predicate: _cb_.predicate, contect: Object): _UnderscoreChain_;
+   findWhere<T>(properties: {}): _UnderscoreChain_;
+   map(iteratee: _cb_.iterateeObject | _cb_.iterateeArray): _UnderscoreChain_;
+   map(iteratee: _cb_.iterateeObject | _cb_.iterateeArray, context: Object): _UnderscoreChain_;
+   omit(keys: string | Array<string> | Function): _UnderscoreChain_;
+   reduce(iteratee: _cb_.iterateeReduceArray): _UnderscoreChain_;
+   reduce(iteratee: _cb_.iterateeReduceArray, memo: Array): _UnderscoreChain_;
+   reduce(iteratee: _cb_.iterateeReduceArray, memo: Array, context: Object): _UnderscoreChain_;
 }
 
 declare class _Underscore_ {
