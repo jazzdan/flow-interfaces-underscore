@@ -1,3 +1,4 @@
+/* jshint ignore: start */
 declare class _UnderscoreCallbacks_ {
    iterateeArray(element: any): void;
    iterateeArray(element: any, index: number): void;
