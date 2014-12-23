@@ -38,7 +38,7 @@ declare class _Underscore_ {
    filter(list: Array, predicate: _cb_.predicate): Array;
    filter(list: Array, predicate: _cb_.predicate, contect: Object): Array;
    findWhere<T>(list: Array<T>, properties: {}): T;
-   intersection(w...: Array): Array;
+   intersection(...w: Array): Array;
    isArray(object: any): boolean;
    isEmpty(object: Object): boolean;
    isObject(object: any): boolean;
