@@ -5,6 +5,7 @@ Flow interfaces allowing the use of Facebook's [Flow][flow] with projects using 
 ## Usage
 
  - `bower install --save flow-interfaces-underscore`
+ - `npm install --save flow-interfaces-underscore`
  - `flow init` at the root of your project
  - Add a `.flowconfig` file with content that resembles:
 
