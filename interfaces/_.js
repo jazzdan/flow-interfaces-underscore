@@ -2,13 +2,13 @@
 declare class _UnderscoreCallbacks_ {
    iterateeArray(element: any): void;
    iterateeArray(element: any, index: number): void;
-   iterateeArray(element: any, index: number, list: Array): void;
+   iterateeArray(element: any, index: number, list: Array<any>): void;
    iterateeObject(value: any): void;
    iterateeObject(value: any, key: string | number): void;
    iterateeObject(value: any, key: string | number, list: Object): void;
-   iterateeReduceArray(memo: any, value: any): Array;
-   iterateeReduceArray(memo: any, value: any, index: number): Array;
-   iterateeReduceArray(memo: any, value: any, key: string | number): Array;
+   iterateeReduceArray(memo: any, value: any): Array<any>;
+   iterateeReduceArray(memo: any, value: any, index: number): Array<any>;
+   iterateeReduceArray(memo: any, value: any, key: string | number): Array<any>;
    predicate(value: any): boolean;
 }
 
@@ -23,29 +23,29 @@ declare class _UnderscoreChain_ {
    findWhere<T>(properties: {}): _UnderscoreChain_;
    map(iteratee: _cb_.iterateeObject | _cb_.iterateeArray): _UnderscoreChain_;
    map(iteratee: _cb_.iterateeObject | _cb_.iterateeArray, context: Object): _UnderscoreChain_;
-   omit(keys: string | Array<string> | Function): _UnderscoreChain_;
+   omit(keys: string | Array<any> | Function): _UnderscoreChain_;
    reduce(iteratee: _cb_.iterateeReduceArray): _UnderscoreChain_;
-   reduce(iteratee: _cb_.iterateeReduceArray, memo: Array): _UnderscoreChain_;
-   reduce(iteratee: _cb_.iterateeReduceArray, memo: Array, context: Object): _UnderscoreChain_;
+   reduce(iteratee: _cb_.iterateeReduceArray, memo: Array<any>): _UnderscoreChain_;
+   reduce(iteratee: _cb_.iterateeReduceArray, memo: Array<any>, context: Object): _UnderscoreChain_;
 }
 
 declare class _Underscore_ {
    chain(object: Object): _UnderscoreChain_;
-   each(list: Array | Object, iteratee: _cb_.iterateeObject | _cb_.iterateeArray): Array | Object;
-   each(list: Array | Object, iteratee: _cb_.iterateeObject | _cb_.iterateeArray, context: Object): Array | Object;
-   filter(list: Array, predicate: _cb_.predicate): Array;
-   filter(list: Array, predicate: _cb_.predicate, contect: Object): Array;
-   findWhere<T>(list: Array<T>, properties: {}): T;
-   intersection(...w: Array): Array;
+   each(list: Array<any> | Object, iteratee: _cb_.iterateeObject | _cb_.iterateeArray): Array<any> | Object;
+   each(list: Array<any> | Object, iteratee: _cb_.iterateeObject | _cb_.iterateeArray, context: Object): Array<any> | Object;
+   filter(list: Array<any>, predicate: _cb_.predicate): Array<any>;
+   filter(list: Array<any>, predicate: _cb_.predicate, contect: Object): Array<any>;
+   findWhere<T>(list: Array<any>, properties: {}): T;
+   intersection(...w: Array<any>): Array<any>;
    isArray(object: any): boolean;
    isEmpty(object: Object): boolean;
    isObject(object: any): boolean;
-   map(list: Array | Object, iteratee: _cb_.iterateeObject | _cb_.iterateeArray): Array | Object;
-   map(list: Array | Object, iteratee: _cb_.iterateeObject | _cb_.iterateeArray, context: Object): Array | Object;
-   omit(object: Object, keys: string | Array<string> | Function): Object;
-   reduce(list: Array, iteratee: _cb_.iterateeReduceArray): string | number;
-   reduce(list: Array, iteratee: _cb_.iterateeReduceArray, memo: Array): string | number;
-   reduce(list: Array, iteratee: _cb_.iterateeReduceArray, memo: Array, context: Object): string | number;
+   map(list: Array<any> | Object, iteratee: _cb_.iterateeObject | _cb_.iterateeArray): Array<any> | Object;
+   map(list: Array<any> | Object, iteratee: _cb_.iterateeObject | _cb_.iterateeArray, context: Object): Array<any> | Object;
+   omit(object: Object, keys: string | Array<any> | Function): Object;
+   reduce(list: Array<any>, iteratee: _cb_.iterateeReduceArray): string | number;
+   reduce(list: Array<any>, iteratee: _cb_.iterateeReduceArray, memo: Array<any>): string | number;
+   reduce(list: Array<any>, iteratee: _cb_.iterateeReduceArray, memo: Array<any>, context: Object): string | number;
 }
 
 declare var _: _Underscore_;
